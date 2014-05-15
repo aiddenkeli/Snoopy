@@ -108,11 +108,13 @@ if [ "$?" -ne 0 ]; then echo "[!] Failed :("; exit 1; fi
 echo "[+] Installing required packages..."
 sleep 3
 
-apt-get install -y build-essential python-pip gcc libxml2-dev libxslt-dev python2.7-dev mysql-server squid3 openvpn bind9 tshark python-mysqldb apache2 python-beaker python-flask python-jinja2 python-mysqldb python-sqlalchemy python-werkzeug
+apt-get install -y build-essential python-pip gcc libxml2-dev libxslt-dev python2.7-dev mysql-server squid3 openvpn bind9 tshark python-mysqldb apache2 python-beaker python-flask python-jinja2 python-mysqldb python-sqlalchemy python-werkzeug python-dev libssl-dev libffi-dev
 if [ "$?" -ne 0 ]; then echo "[!] Failed :("; exit 1; fi
 if [ "$xplico" == "yes" ]; then
 	apt-get install -y xplico 
 fi
+pip install --upgrade setuptools
+pip install --upgrade Distribute
 pip install lxml beautifulsoup requests==0.14.2 httplib2 PIL mitmproxy ipaddr publicsuffix twisted cryptacular Flask_SQLAlchemy
 if [ "$?" -ne 0 ]; then echo "[!] Failed :("; exit 1; fi
 
