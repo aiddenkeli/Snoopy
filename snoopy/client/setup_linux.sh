@@ -36,7 +36,10 @@ EOL
 chmod +x /usr/bin/snoopy
 
 echo "+-----------------------------------------------------------------------------+"
-echo "+ Done. Run 'snoopy' now.  					 	    +"
+echo "+ Fix lua error: cd /usr/share/wireshark  +                    "
+echo "+ nano init.lua                           +                    "
+echo "+ line #29 change to: disable_lua = true  +                    "
+echo "+ Then your done. Run 'snoopy' to start.  					 	    +"
 echo "+-----------------------------------------------------------------------------+"
 
 
