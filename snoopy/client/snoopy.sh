@@ -155,7 +155,7 @@ if [[ "$arch" == "n900" ]]; then
 
         elif [[ "$arch" == "linux" ]]; then
 		
-                tshark -q -S -l -i $iface -R 'wlan.fc.type_subtype eq 4' -T fields -e wlan.sa -e wlan_mgt.ssid -e radiotap.dbm_antsignal -e frame.time -E separator=, -E quote=d |sed -u "s/^/\"$device_id\",\"$run_id\",\"$location\",/" >> $save_path/probe_data.txt &
+                tshark -q -S -l -i $iface -Y 'wlan.fc.type_subtype eq 4' -T fields -e wlan.sa -e wlan_mgt.ssid -e radiotap.dbm_antsignal -e frame.time -E separator=, -E quote=d |sed -u "s/^/\"$device_id\",\"$run_id\",\"$location\",/" >> $save_path/probe_data.txt &
         fi
         t_pid=$!
 	echo "[+] Client probe requests can be viewed via 'tail -f $save_path/probe_data.txt'"
