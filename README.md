@@ -1,3 +1,9 @@
+ 
+ 
+ **** Glen W. has a NEW version that is so much better! ****
+ **** Check it out at https://github.com/sensepost/snoopy-ng ****
+ 
+ 
      _______  __    _  _______  _______  _______  __   __ 
     |       ||  |  | ||       ||       ||       ||  | |  |
     |  _____||   |_| ||   _   ||   _   ||    _  ||  |_|  |
